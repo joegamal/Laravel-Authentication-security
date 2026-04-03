@@ -7,7 +7,7 @@
 
 <body>
     <div>
-    <form action="{{ route('api-user') }}" method="get">
+    <form action="{{ route('api-user') }}" method="post">
         @csrf
         <label for="text">user name</label>
         <input type="text" name="username">

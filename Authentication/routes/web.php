@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
-use function Pest\Laravel\json;
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,11 +18,8 @@ Route::get('/signin', function(){
 })->name('user.signin');
 
 
-Route::get('/user', function (Request $request) {
-    $name = $request->query('username');
-    $email = $request->query('useremail');
-    $password = $request->query('password');
-    echo $name . '<br>' . $email . '<br>' . $password;
+Route::post('/user', function (Request $request) {
+    dd($request->all());
 })->name('api-user');
 
 
