@@ -7,18 +7,18 @@
 
 <body>
     <div>
-    hello world drom login
-    <form action="" method="post">
+    <form action="{{ route('api-user') }}" method="get">
+        @csrf
         <label for="text">user name</label>
         <input type="text" name="username">
 
         <label for="email">user email</label>
-        <input type="email" name="useremain" id="">
+        <input type="email" name="useremail" id="">
 
         <label for="password">user password</label>
         <input type="password" name="password" id="">
 
-        <button type="submit" class="sub">Sign in </button>
+        <button type="submit" class="sub">Log in </button>
     </form>
 </div>
 </body>
