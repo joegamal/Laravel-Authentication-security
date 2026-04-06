@@ -23,3 +23,8 @@ Route::post('/user', function (Request $request) {
 })->name('api-user');
 
 
+Route::post('/user/sessions', function (Request $request) {
+    dd($request->all());
+})->name('api-user');
+
+
