@@ -9,9 +9,8 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function(){
-    Log::debug("log in route requested");
     return view('login');
-})->name('user.login');
+})->name('login');
 
 
 Route::get('/signin', function(){
